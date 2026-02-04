@@ -1,197 +1,35 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Per Te ✨</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">  <style>
-    :root {
-      --bg: #0b0d17;
-      --primary: #ff5fa2;
-      --secondary: #9b8cff;
-      --text: #f5f5f7;
-      --soft: rgba(255,255,255,0.08);
-    }
+  <meta charset="UTF-8">
+  <title>Per Lei ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <!-- MUSICA -->
+  <audio id="bg-music" src="assets/music.mp3" preload="auto"></audio>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #14162a, var(--bg));
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(255,95,162,0.15), transparent);
-      animation: glow 8s infinite linear;
-    }
-
-    @keyframes glow {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .hero-content {
-      position: relative;
-      max-width: 900px;
-      animation: fadeUp 2s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    h1 span {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 2.5rem;
-    }
-
-    .heart {
-      font-size: 3rem;
-      animation: beat 1.5s infinite;
-      margin-bottom: 2rem;
-    }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 6rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: var(--soft);
-      border-radius: 24px;
-      padding: 3rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
-      margin-bottom: 4rem;
-      animation: fadeUp 1.5s ease forwards;
-    }
-
-    .card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .card p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      opacity: 0.95;
-    }
-
-    /* QUOTE */
-    .quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      text-align: center;
-      margin: 6rem auto;
-      max-width: 900px;
-      opacity: 0.95;
-    }
-
-    .quote span {
-      color: var(--primary);
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      opacity: 0.6;
-      font-size: 0.9rem;
-    }
-
-    /* STARS */
-    .star {
-      position: fixed;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: twinkle 5s infinite ease-in-out;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 1; }
-    }
-  </style></head>
-<body>  <!-- HERO -->  <div class="hero">
-    <div class="hero-content">
-      <div class="heart">❤</div>
-      <h1>Questo sito esiste <br><span>solo per te</span></h1>
-      <p class="subtitle">Non è un sito perfetto. È sincero. Come quello che provo.</p>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="logo">❤</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="pages/storia.html">Noi</a>
+      <a href="pages/ricordi.html">Ricordi</a>
+      <a href="pages/messaggio.html">Per Te</a>
     </div>
-  </div>  <!-- SECTION 1 -->  <section>
-    <div class="card">
-      <h2>Perché sei speciale</h2>
-      <p>
-        Sei quella persona che rende leggere anche le giornate pesanti. 
-        Il tuo modo di parlare, di ridere, di esserci… cambia tutto.
-        Questo sito non serve a impressionarti: serve a dirti che conti.
-      </p>
-    </div><div class="card">
-  <h2>Quello che non dico mai</h2>
-  <p>
-    A volte le parole restano bloccate, ma i sentimenti no.
-    Se sei qui a leggere, è perché volevo fare qualcosa che restasse.
-    Qualcosa che, anche a distanza di tempo, dica ancora: "sei importante per me".
-  </p>
-</div>
+  </nav>
 
-  </section>  <!-- QUOTE -->  <div class="quote">
-    "Tra tutte le coincidenze della vita, <span>tu</span> sei la mia preferita."
-  </div>  <!-- FOOTER -->  <footer>
-    Fatto con il cuore. Non con un template.
-  </footer>  <!-- STARS SCRIPT -->  <script>
-    for (let i = 0; i < 80; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.top = Math.random() * 100 + 'vh';
-      star.style.left = Math.random() * 100 + 'vw';
-      star.style.animationDelay = Math.random() * 5 + 's';
-      document.body.appendChild(star);
-    }
-  </script></body>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Questo spazio esiste <span>per te</span></h1>
+    <p>Non è un sito. È qualcosa che sentivo di dover fare.</p>
+    <a class="cta" href="pages/messaggio.html">Apri il messaggio</a>
+  </header>
+
+  <script src="assets/script.js"></script>
+</body>
 </html>
